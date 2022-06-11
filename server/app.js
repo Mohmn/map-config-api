@@ -7,6 +7,7 @@ const session = require('express-session');
 const HttpError = require('./utils/HttpError');
 const { errorHandler } = require('./utils/utils');
 const { handlerWrapper } = require('./utils/utils');
+const router = require('./routes');
 
 const memoryStore = new session.MemoryStore();
 
@@ -21,10 +22,12 @@ if (process.env.NODE_ENV === 'development') {
   app.use(cors());
 }
 
-// app.use(keycloak.middleware({
-//   logout: '/logout',
-//   admin: '/'
-// }));
+app.use(
+  keycloak.middleware({
+    logout: '/logout',
+    admin: '/',
+  }),
+);
 
 /*
  * Check request
@@ -53,6 +56,8 @@ app.use(express.json()); // parse application/json
 // app.get('/settings', keycloak.protect('realm:web-map-manager'), (req, res) =>
 //   res.status(200).json({ ok: true }),
 // );
+
+app.use(router);
 
 app.get(
   '/settings',
