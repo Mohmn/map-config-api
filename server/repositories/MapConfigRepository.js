@@ -13,6 +13,7 @@ class MapConfigRepository extends BaseRepository {
       .onConflict('organization_id')
       .merge({
         theme: object.theme,
+        updated_at: new Date().toISOString(),
       });
   }
 }

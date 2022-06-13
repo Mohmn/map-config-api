@@ -5,12 +5,22 @@ class MapConfig {
     this._mapConfigRepository = new MapConfigRepository(session);
   }
 
-  static MapConfig({ id, organization_id, theme }) {
-    return Object.freeze({ id, organization_id, theme });
+  static MapConfig({ id, organization_id, theme, created_at, updated_at }) {
+    return Object.freeze({
+      id,
+      organization_id,
+      theme,
+      created_at,
+      updated_at,
+    });
   }
 
   async getMapConfigs(filter, limitOptions) {
-    return this._mapConfigRepository.getByFilter(filter, limitOptions);
+    const mapConfigs = await this._mapConfigRepository.getByFilter(
+      filter,
+      limitOptions,
+    );
+    return mapConfigs.map((m) => this.constructor.MapConfig(m));
   }
 
   async createMapConfigs(mapConfig) {

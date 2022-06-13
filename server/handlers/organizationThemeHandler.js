@@ -1,7 +1,17 @@
+const Joi = require('joi');
 const MapConfigService = require('../services/MapConfigService');
 const HttpError = require('../utils/HttpError');
 
+const organizationThemePostSchema = Joi.object({
+  theme: Joi.object().required(),
+});
+
+const organizationIdSchema = Joi.object({
+  organization_id: Joi.string().uuid().required(),
+});
+
 const organizationThemeGetHandler = async (req, res) => {
+  await organizationIdSchema.validateAsync(req.params);
   const { organization_id } = req.params;
   const mapConfigService = new MapConfigService();
   const result = await mapConfigService.getMapConfigs({ organization_id });
@@ -14,6 +24,8 @@ const organizationThemeGetHandler = async (req, res) => {
 };
 
 const organizationThemePostHandler = async (req, res) => {
+  await organizationIdSchema.validateAsync(req.params);
+  await organizationThemePostSchema.validateAsync(req.body);
   const { organization_id } = req.params;
   const { theme } = req.body;
   const mapConfigService = new MapConfigService();
