@@ -22,12 +22,12 @@ if (process.env.NODE_ENV === 'development') {
   app.use(cors());
 }
 
-app.use(
-  keycloak.middleware({
-    logout: '/logout',
-    admin: '/',
-  }),
-);
+// app.use(
+//   keycloak.middleware({
+//     logout: '/logout',
+//     admin: '/',
+//   }),
+// );
 
 /*
  * Check request
