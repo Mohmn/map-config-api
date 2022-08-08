@@ -1,39 +1,38 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: SERVICE
+  name: treetracker-map-config-api
   labels:
-    app: SERVICE 
+    app: treetracker-map-config-api
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: SERVICE
+      app: treetracker-map-config-api
   template:
     metadata:
       labels:
-        app: SERVICE
+        app: treetracker-map-config-api
     spec:
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
-            - matchExpressions:
-              - key: doks.digitalocean.com/node-pool
-                operator: In
-                values:
-                - microservices-node-pool
+              - matchExpressions:
+                  - key: doks.digitalocean.com/node-pool
+                    operator: In
+                    values:
+                      - microservices-node-pool
       containers:
-      - name: SERVICE
-        image: greenstand/SERVICE:TAG
-        ports:
-        - containerPort: 80
-        env:
-          - name: DATABASE_URL
-            valueFrom:
-              secretKeyRef:
-                name: database-connection
-                key: db
-          - name: DATABASE_SCHEMA
-            value: messaging
-
+        - name: treetracker-map-config-api
+          image: greenstand/treetracker-map-config-api:TAG
+          ports:
+            - containerPort: 80
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: database-connection
+                  key: db
+            - name: DATABASE_SCHEMA
+              value: messaging
