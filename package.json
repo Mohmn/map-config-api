@@ -82,10 +82,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Greenstand/{project}.git"
+    "url": "git+https://github.com/Greenstand/map-config-api.git"
   },
   "bugs": {
-    "url": "https://github.com/Greenstand/{project}/issues"
+    "url": "https://github.com/Greenstand/map-config-api/issues"
   },
-  "homepage": "https://github.com/Greenstand/{project}#readme"
+  "homepage": "https://github.com/Greenstand/map-config-api#readme"
 }
