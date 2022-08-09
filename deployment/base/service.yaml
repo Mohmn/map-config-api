@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: SERVICE
+  name: treetracker-map-config-api
 spec:
   selector:
-    app: SERVICE
+    app: treetracker-map-config-api
   ports:
     - name: http
       protocol: TCP
