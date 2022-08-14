@@ -25,7 +25,6 @@
     "db-migrate-ci": "cd database; db-migrate up",
     "db-migrate-dev": "cd database; db-migrate --env dev up; db-migrate --env integration up",
     "prepare": "husky install",
-    "pre-commit": "npm run lint",
     "seed-dev": "NODE_ENV=development knex seed:run"
   },
   "keywords": [

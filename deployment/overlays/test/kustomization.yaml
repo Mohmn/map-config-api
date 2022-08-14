@@ -1,3 +1,6 @@
+patchesStrategicMerge:
+  - database-migration-connection-sealed-secret.yaml
+  - database-connection-sealed-secret.yaml
 images:
   - name: greenstand/treetracker-map-config-api
     newTag: 0.0.0
