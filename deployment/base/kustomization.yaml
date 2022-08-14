@@ -3,3 +3,4 @@ resources:
   - mapping.yaml
   - service.yaml
   - database-migration-job.yaml
+  - namespace.yaml
