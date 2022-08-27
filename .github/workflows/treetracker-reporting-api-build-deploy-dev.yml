@@ -69,7 +69,7 @@ jobs:
         run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash
 
       - name: Run kustomize
-        run: (cd deployment/overlays/development && ../../../kustomize edit set image greenstand/${{ github.event.repository.name }}:${{ steps.export_bumped_version.outputs.bumped_version }} )
+        run: (cd deployment/overlays/development && ../../../kustomize edit set image greenstand/treetracker-${{ github.event.repository.name }}:${{ steps.export_bumped_version.outputs.bumped_version }} )
 
       - name: Commit dev kustomization file with new app version
         if: |
