@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/Greenstand/map-config-api/compare/v1.0.5...v1.0.6) (2022-08-28)
+
+
+### Bug Fixes
+
+* trigger deployment ([bb473ce](https://github.com/Greenstand/map-config-api/commit/bb473ce5bdd0434d9cd904aa29fad517cde24254))
+
 ## [1.0.5](https://github.com/Greenstand/map-config-api/compare/v1.0.4...v1.0.5) (2022-08-28)
 
 
