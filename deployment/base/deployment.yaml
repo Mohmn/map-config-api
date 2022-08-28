@@ -25,7 +25,7 @@ spec:
                       - microservices-node-pool
       containers:
         - name: treetracker-map-config-api
-          image: greenstand/treetracker-map-config-api:TAG
+          image: greenstand/map-config-api:TAG
           ports:
             - containerPort: 80
           env:
