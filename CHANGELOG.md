@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/Greenstand/map-config-api/compare/v1.0.4...v1.0.5) (2022-08-28)
+
+
+### Bug Fixes
+
+* merge conflict ([34722ae](https://github.com/Greenstand/map-config-api/commit/34722ae97f5650a7637098f39935fb12fccd5458))
+
 ## [1.0.4](https://github.com/Greenstand/map-config-api/compare/v1.0.3...v1.0.4) (2022-08-28)
 
 
