@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/Greenstand/map-config-api/compare/v1.0.3...v1.0.4) (2022-08-28)
+
+
+### Bug Fixes
+
+* workflow ([80c8c03](https://github.com/Greenstand/map-config-api/commit/80c8c03126d7c88db5ac41a958fc5266789c855a))
+
 ## [1.0.3](https://github.com/Greenstand/map-config-api/compare/v1.0.2...v1.0.3) (2022-08-27)
 
 
