@@ -21,7 +21,7 @@ jobs:
       - name: Install kustomize
         run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash
       - name: Run kustomize
-        run: (cd deployment/overlays/test && ../../../kustomize edit set image greenstand/treetracker-${{ github.event.repository.name }}:${{ github.event.inputs.environment }})
+        run: (cd deployment/overlays/test && ../../../kustomize edit set image greenstand/${{ github.event.repository.name }}:${{ github.event.inputs.environment }})
       - name: Commit test kustomization file with new app version
         run: |
           git config --local user.email "action@github.com"
