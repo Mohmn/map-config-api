@@ -9,7 +9,7 @@ const knexConfig = {
   client: 'pg',
   debug: process.env.NODE_LOG_LEVEL === 'debug',
   connection,
-  searchPath: 'webmap',
+  searchPath: 'webmap', 
   pool: { min: 0, max: 100 },
 };
 
