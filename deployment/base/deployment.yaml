@@ -34,5 +34,3 @@ spec:
                 secretKeyRef:
                   name: database-connection
                   key: db
-            - name: DATABASE_SCHEMA
-              value: messaging
