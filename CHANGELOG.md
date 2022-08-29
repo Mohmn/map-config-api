@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/Greenstand/map-config-api/compare/v1.0.8...v1.0.9) (2022-08-29)
+
+
+### Bug Fixes
+
+* correct docker image with migration job ([e06dcc7](https://github.com/Greenstand/map-config-api/commit/e06dcc7acc6f855b9f365846fb75a868f6e6c73e))
+
 ## [1.0.8](https://github.com/Greenstand/map-config-api/compare/v1.0.7...v1.0.8) (2022-08-29)
 
 
