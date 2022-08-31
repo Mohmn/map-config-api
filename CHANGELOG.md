@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/Greenstand/map-config-api/compare/v1.0.10...v1.0.11) (2022-08-31)
+
+
+### Bug Fixes
+
+* update prod env ([70ee337](https://github.com/Greenstand/map-config-api/commit/70ee337a1127c40685de429d37fb7a2d0d8813a8))
+
 ## [1.0.10](https://github.com/Greenstand/map-config-api/compare/v1.0.9...v1.0.10) (2022-08-29)
 
 
