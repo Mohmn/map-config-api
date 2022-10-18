@@ -10,7 +10,7 @@ const configGetHandler = async (req, res) => {
     throw new HttpError(404, 'Not Found');
   }
 
-  res.status(200).json(result[0]);
+  res.status(200).json(result);
 };
 
 const configPostHandler = async (req, res) => {
