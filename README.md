@@ -1,6 +1,6 @@
-# Name of this microservice
+# Map Config API
    
-Description of this microservice
+This is the Map Config API a service for handling additional information for the Web Map Client
 
 # Development toolkit
 
