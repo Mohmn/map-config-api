@@ -1,6 +1,6 @@
 const ConfigService = require('../../services/ConfigService');
 const HttpError = require('../../utils/HttpError');
-const { configPostSchema } = require('./schemas');
+const { configPostSchema, configPatchSchema } = require('./schemas');
 
 const configGetHandler = async (req, res) => {
   const configService = new ConfigService();
@@ -21,7 +21,16 @@ const configPostHandler = async (req, res) => {
   res.status(200).json({ ok: true });
 };
 
+const configPatchHandler = async (req, res) => {
+  await configPatchSchema.validateAsync(req.body, { abortEarly: false });
+  const configService = new ConfigService();
+  await configService.patchConfigs(req.body);
+
+  res.status(200).json({ ok: true });
+};
+
 module.exports = {
   configGetHandler,
   configPostHandler,
+  configPatchHandler,
 };

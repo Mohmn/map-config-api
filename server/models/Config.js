@@ -28,6 +28,10 @@ class Config {
   async createConfigs(config) {
     return this._configRepository.create(config);
   }
+
+  async patchConfigs(config) {
+    return this._configRepository.update(config);
+  }
 }
 
 module.exports = Config;
