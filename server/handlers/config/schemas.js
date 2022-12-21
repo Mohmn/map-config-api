@@ -7,4 +7,9 @@ const configPostSchema = Joi.object({
   ref_uuid: Joi.string().uuid(),
 });
 
-module.exports = { configPostSchema };
+const configPatchSchema = Joi.object({
+  id: Joi.string().required(),
+  data: Joi.object().required(),
+});
+
+module.exports = { configPostSchema, configPatchSchema };
