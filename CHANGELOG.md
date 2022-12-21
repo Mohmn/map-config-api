@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Greenstand/map-config-api/compare/v1.0.12...v1.1.0) (2022-12-21)
+
+
+### Features
+
+* add patch functionality ([76a8938](https://github.com/Greenstand/map-config-api/commit/76a8938ae2fa84b1b394ea7a7942424fe8d2dfb7))
+
 ## [1.0.12](https://github.com/Greenstand/map-config-api/compare/v1.0.11...v1.0.12) (2022-10-18)
 
 
