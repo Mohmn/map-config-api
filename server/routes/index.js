@@ -1,1 +1,4 @@
-module.exports = [require('./configRoutes')];
+module.exports = [
+  require('./configRoutes'),
+  require('./organisationRoutes')
+];
